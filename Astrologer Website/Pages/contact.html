@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .contact-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        p {
+            margin-bottom: 30px;
+            color: #666;
+        }
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: #eaeaea;
+            padding: 15px;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+        }
+        .contact-item:hover {
+            background-color: #d1d1d1;
+        }
+        .contact-item a {
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            color: #333;
+            display: flex;
+            align-items: center;
+        }
+        .contact-item i {
+            font-size: 24px;
+        }
+        .whatsapp { color: #25D366; }
+        .instagram { color: #E1306C; }
+        .facebook { color: #3b5998; }
+        .email { color: #EA4335; }
+    </style>
+</head>
+<body>
+
+    <div class="contact-container">
+        <h1>Contact Us</h1>
+        <p>If you have any questions or need assistance, feel free to reach out to us through any of the following platforms:</p>
+
+        <div class="contact-methods">
+            <!-- WhatsApp -->
+            <div class="contact-item">
+                <a href="https://wa.link/lsn4rz" target="_blank">
+                    <i class="fab fa-whatsapp whatsapp"></i>
+                    <span>WhatsApp</span>
+                </a>
+            </div>
+            <!-- Instagram -->
+            <div class="contact-item">
+                <a href="https://www.instagram.com/yourprofile" target="_blank">
+                    <i class="fab fa-instagram instagram"></i>
+                    <span>Instagram</span>
+                </a>
+            </div>
+            <!-- Facebook -->
+            <div class="contact-item">
+                <a href="https://www.facebook.com/yourprofile" target="_blank">
+                    <i class="fab fa-facebook facebook"></i>
+                    <span>Facebook</span>
+                </a>
+            </div>
+            <!-- Email -->
+            <div class="contact-item">
+                <a href="raghavacharyaacharya@gmail.com" target="_blank">
+                    <i class="fas fa-envelope email"></i>
+                    <span>Email</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

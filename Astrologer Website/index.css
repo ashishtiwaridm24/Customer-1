@@ -1,0 +1,818 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Assistant, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica, Arial, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #2c3e50; /* Dark Blue-Gray Background */
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #ecf0f1; /* Light Gray Text */
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 16px 24px;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 8px;
+  margin: 10px;
+  transition: background-color 0.3s ease, border-bottom 0.3s ease,
+    color 0.3s ease;
+}
+
+.topnav a:hover {
+  background-color: #34495e; /* Slightly lighter Blue-Gray on Hover */
+  border-bottom: 4px solid #e74c3c; /* Bright Red Underline on Hover */
+}
+
+.topnav a.active {
+  color: #f39c12; /* Golden Yellow for Active Link */
+  background-color: #2c3e50; /* Match Background Color */
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+    padding: 16px;
+    font-size: 18px;
+    color: #ecf0f1; /* Light Gray for Icon */
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    padding: 16px;
+    background-color: #34495e; /* Background for mobile menu items */
+    color: #ecf0f1; /* Text color for mobile menu items */
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.grid-item {
+  background-color: #f0f0f0;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin: 10px 0;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.call-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.whatsapp-btn {
+  background-color: #25d366;
+  color: white;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.submit-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.call-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .form-container {
+    padding: 15px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.slider-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.slider-box {
+  flex: 1 1 calc(33.333% - 20px); /* 3 boxes on large screens */
+  margin: 10px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.slider-box img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ccc;
+}
+
+.box-content {
+  padding: 15px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+p {
+  color: #666;
+}
+
+/* Hover effect */
+.slider-box:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .slider-box {
+    flex: 1 1 calc(50% - 20px); /* 2 boxes on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .slider-box {
+    flex: 1 1 100%; /* 1 box on very small screens */
+  }
+}
+
+/* Container to align buttons properly */
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Basic button styling */
+.call-btn,
+.whatsapp-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+/* Call Button */
+.call-btn {
+  background-color: #28a745; /* Green */
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+  background-color: #25d366; /* WhatsApp green */
+}
+
+/* Hover effects */
+.call-btn:hover {
+  background-color: #218838;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.whatsapp-btn:hover {
+  background-color: #1ebc57;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .call-btn,
+  .whatsapp-btn {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+}
+
+/* h1 styling */
+
+/* Basic styling for the H1 */
+.astro-heading {
+  font-family: "Poppins", sans-serif; /* Use a modern and clean font */
+  font-size: 48px; /* Large size for desktop */
+  font-weight: 700; /* Bold for emphasis */
+  color: #333; /* Dark gray for a professional look */
+  text-align: center; /* Center align the heading */
+  margin-top: 20px; /* Add space above the heading */
+  margin-bottom: 20px; /* Space below the heading */
+  line-height: 1.2; /* Improve readability with slightly increased line spacing */
+  letter-spacing: 1px; /* Slightly spaced letters for better aesthetics */
+}
+
+/* Decorative underline effect */
+.astro-heading::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #25d366; /* Matches WhatsApp button or use any theme color */
+  margin: 10px auto; /* Center it and give some space from the heading */
+  border-radius: 2px; /* Rounded edges for the underline */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .astro-heading {
+    font-size: 36px; /* Reduce size for tablet devices */
+  }
+}
+
+@media (max-width: 480px) {
+  .astro-heading {
+    font-size: 28px; /* Further reduce size for mobile devices */
+  }
+}
+
+/* Main */
+
+/* General Styles for Container */
+.best-ser {
+  background-color: #f8f9fa;
+  padding: 50px 0;
+}
+
+.best-sub h1,
+.best-header h1 {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.best-header h1 {
+  color: #25d366; /* Custom color for the name */
+}
+
+/* Grid system for items */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5%;
+  justify-content: space-around;
+}
+
+/* Best Border for each item box */
+.best-border {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.best-border:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.best-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Title Styles */
+.best-title,
+.best-titl {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+/* Call and WhatsApp Buttons */
+.best-call a,
+.best-what a {
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px;
+  margin-top: 5px;
+
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.best-call a {
+  background-color: #28a745;
+}
+
+.best-call a:hover {
+  background-color: #218838;
+}
+
+.best-what a {
+  background-color: #25d366;
+}
+
+.best-what a:hover {
+  background-color: #1ebc57;
+}
+
+/* Font Awesome Icon */
+.best-call i,
+.best-what i {
+  margin-right: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .best-sub h1,
+  .best-header h1 {
+    font-size: 28px;
+  }
+
+  .col-sm-4,
+  .col-sm-3 {
+    flex: 0 0 48%;
+    max-width: 48%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .col-sm-4,
+  .col-sm-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .best-title,
+  .best-titl {
+    font-size: 18px;
+  }
+}
+
+/* Footer Css */
+
+/* Footer styling */
+footer {
+  background-color: #222;
+  padding: 50px 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: white;
+}
+
+.footer-section {
+  width: calc(20% - 20px);
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.footer-section h2 {
+  font-size: 1.8em; /* Increase font size */
+  margin-bottom: 15px;
+  position: relative;
+  color: white;
+}
+
+
+
+.footer-section h2::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 30%;
+  height: 2px;
+  background-color: #007bff; /* Use the accent color */
+  color: white;
+}
+
+.footer-section p {
+  margin-bottom: 15px;
+  color: white;
+}
+
+.know-more-btn {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.know-more-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Service links styling */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #fff;
+}
+
+/* Social icons styling */
+.social-links a {
+  display: inline-block;
+  margin-right: 15px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.social-links i {
+  font-size: 30px;
+}
+
+.social-links a i:hover {
+  color: #007bff;
+}
+
+/* Responsive layout */
+@media (max-width: 1200px) {
+  .footer-section {
+    width: calc(33.33% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-section {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-section {
+    width: 100%;
+  }
+}
+
+
+/* Why choose us */
+
+
+.why-choose-us {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.why-choose-us h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.feature {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  width: 250px;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-10px);
+}
+
+.feature i {
+  font-size: 2.5em;
+  color: #ff9800;
+  margin-bottom: 15px;
+}
+
+.feature h3 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  font-size: 1em;
+  color: #777;
+  line-height: 1.6;
+}
+
+
+
+/* Feedback */
+
+
+.testimonials {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.testimonial {
+  background-color: #f9f9f9;
+  width: 300px;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.testimonial:hover {
+  transform: translateY(-10px);
+}
+
+.client-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.client-info img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin-right: 15px;
+}
+
+.client-name h3 {
+  font-size: 1.2em;
+  margin: 0;
+  color: #333;
+}
+
+.client-name p {
+  font-size: 0.9em;
+  color: #888;
+  margin: 5px 0 0 0;
+}
+
+.client-review {
+  font-size: 1em;
+  color: #777;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.client-rating {
+  color: #ff9800;
+}
+
+.client-rating i {
+  margin-right: 5px;
+}
+
+
+
+/* Marquuee tag */
+
+
+.marquee-section {
+  background-color: #333;
+  padding: 20px 0;
+}
+
+marquee {
+  font-size: 1.5em;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+/* Call */
+
+
+.floating-icon {
+  position: fixed;
+  bottom: 20px;
+  z-index: 1000;
+  font-size: 2.5em;
+  color: #fff;
+  padding: 15px;
+  border-radius: 50%;
+  background-color: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.call-icon {
+  left: 20px;
+  background-color: #1E88E5; /* Blue for Call */
+}
+
+.whatsapp-icon {
+  right: 20px;
+}
+
+.floating-icon:hover {
+  background-color: #ff9800; /* Orange on hover */
+}
+
+/* Make the icons smaller on mobile */
+@media (max-width: 600px) {
+  .floating-icon {
+      font-size: 1.8em;
+      padding: 10px;
+  }
+}

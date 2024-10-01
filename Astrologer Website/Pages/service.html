@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astrology Service Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            opacity: 0; /* For animation */
+            transform: translateY(20px); /* For animation */
+            animation: fadeIn 0.5s forwards; /* Animation for fade-in */
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .main-services {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .main-services h2 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #444;
+            text-transform: uppercase;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .service-item {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s; /* Animation for scale */
+        }
+        .service-item:hover {
+            transform: scale(1.05); /* Scale effect on hover */
+        }
+        .service-item h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #007BFF;
+        }
+        .service-item p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .service-item a{
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+           text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+           transition: background-color 0.3s ease;
+           margin: 20px;
+        }
+
+        .service-item a:hover{
+            background-color: #45a049;
+        }
+
+
+        form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+        label {
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        input, select, textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            width: 100%;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s; /* Animation for button */
+        }
+        button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05); /* Scale effect on hover */
+        }
+        .contact-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .call-button, .whatsapp-button {
+            text-align: center;
+            padding: 12px 20px;
+            font-size: 16px;
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+            flex: 1;
+            margin: 0 5px;
+            transition: transform 0.3s; /* Animation for buttons */
+        }
+        .call-button {
+            background-color: #28a745;
+        }
+        .whatsapp-button {
+            background-color: #25D366;
+        }
+        .call-button:hover {
+            background-color: #218838;
+            transform: scale(1.05); /* Scale effect on hover */
+        }
+        .whatsapp-button:hover {
+            background-color: #1ebc57;
+            transform: scale(1.05); /* Scale effect on hover */
+        }
+
+        /* Responsive design */
+        @media (max-width: 1200px) {
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 576px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Our Main Services Section -->
+
+    <div class="main-services">
+        <h2>Our Main Services</h2>
+        <div class="services-grid">
+            <div class="service-item">
+                <h2>Love Problem Solutions</h2>
+                <p>Get the best remedies for love issues and find peace in relationships.</p>
+                <a href="tel:9780710560">Call Now</a>
+            </div>
+            <div class="service-item">
+                <h2>Family Dispute Resolution</h2>
+                <p>Resolve family disputes and bring harmony back to your home.</p>
+                <a href="tel:9780710560">Call Now</a>
+            </div>
+            <div class="service-item">
+                <h2>Career Guidance</h2>
+                <p>Receive expert advice on your career and achieve financial success.</p>
+                <a href="">Call Now</a>
+            </div>
+            <div class="service-item">
+                <h2>Black Magic Removal</h2>
+                <p>Eliminate the effects of black magic and protect your well-being.</p>
+                <a href="tel:9780710560">Call Now</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Form Section -->
+    <div class="container">
+        <h1>Get Expert Solutions for Your Problems</h1>
+
+        <form id="serviceForm">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+
+            <label for="problem">Select Your Problem:</label>
+            <select id="problem" name="problem" required>
+                <option value="" disabled selected>Select Your Problem</option>
+                <option value="loveProblem">Love Problem Solution</option>
+                <option value="familyProblem">Family Problem Solution</option>
+                <option value="careerProblem">Career Problem Solution</option>
+                <option value="lostLove">Get Lost Love Back</option>
+            </select>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" placeholder="Describe your issue..." rows="5" required></textarea>
+
+            <button type="submit" id="submitButton">Submit</button>
+        </form>
+
+        <div class="contact-buttons">
+            <a href="tel:+9780710560" class="call-button">Call Now</a>
+            <a href="https://wa.link/lsn4rz" target="_blank" class="whatsapp-button">WhatsApp Now</a>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
